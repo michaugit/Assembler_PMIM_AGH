@@ -1,0 +1,13 @@
+Labolatorium 2:
+
+lab_1a.s:
+	macro ->  zdefiniowane ciągi instrukcji / znaków , wykorzystuje inteligencje kompilatora 
+	dyrektywy: .macro : def. macro     
+					.macro disp_str_32 [nazwa] file_id, address, length [parametry]   
+					mov $write_32 [zdefiniowany symbol], %eax				
+					mov \file_id, %ebx [umieszczenie odpowiednich rejestrów w parametrach]
+					mov \address, %ecx //wykorzystuja parametry
+ 					mov \length, %edx
+					int $kernel
+					.adm
+		   .adm : kończy definicję 
